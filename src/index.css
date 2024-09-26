@@ -1,13 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: "Overpass", sans-serif;
+
+    background-color: hsl(216, 12%, 8%);
+    min-height: 100vh;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main {
+    max-width: 350px;
+    padding: 25px;
+    background-image: linear-gradient(
+        to right bottom,
+        hsl(213, 19%, 18%),
+        hsl(216, 12%, 8%)
+    );
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+.star-icon {
+    background-color: hsl(213, 19%, 18%);
+    padding: 15px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.heading {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+.paragraph {
+    color: hsl(217, 12%, 63%);
+    font-size: 14px;
+    margin-right: 10px;
+}
+.ratings {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.rating {
+    padding: 15px;
+    display: inline-block;
+    text-align: center;
+    height: 20px;
+    width: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    background-color: hsla(217, 12%, 63%, 0.1);
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    justify-self: center;
+    text-decoration: none;
+}
+.rating.active {
+    background-color: hsl(25, 97%, 53%);
+    color: hsl(216, 12%, 8%);
+}
+.rating:hover {
+    color: hsl(216, 12%, 8%);
+    background-color: hsl(0, 0%, 100%);
+}
+.btn {
+    background-color: hsl(25, 97%, 53%);
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+    margin-inline: auto;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: hsl(216, 12%, 8%);
+    background-color: hsl(0, 0%, 100%);
+}
+.centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.image {
+    width: 50%;
+    margin: 10px 0;
+}
+.centered span {
+    background-color: hsla(217, 12%, 63%, 0.1);
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 20px;
+    color: hsl(25, 97%, 53%);
 }
